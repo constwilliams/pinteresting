@@ -6,11 +6,22 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
   </head>
 
-  <body>
-  	<%= link_to "Home", root_path %> &nbsp;
-	<%= link_to "About Us", about_path %>
-    <%= yield %>
+  <body>  
+
+  	<%= render 'layouts/header' %>
+
+    <div class="container">
+
+  	<!-- All Content here -->
+    	<%= yield %>
+
+    </div>
+
   </body>
 </html>
